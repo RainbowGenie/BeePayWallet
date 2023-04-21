@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "998001974073",
+    "project_id": "ezlogbook-dev",
+    "storage_bucket": "ezlogbook-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998001974073:android:967c3201012c38c8d0e6e8",
+        "android_client_info": {
+          "package_name": "flight.app.ezlogbook.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998001974073-na46fde9s8qitlum8jll4po0enp7m2v7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "flight.app.ezlogbook.dev",
+            "certificate_hash": "ab6907c731cb799af1d7522e96b62d551f7ff016"
+          }
+        },
+        {
+          "client_id": "998001974073-3auer1cerigorbacca2tbkbjvr54pico.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4h-N7fSEokMSRzzbLBmmX07iJnOW-cw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998001974073-0epl4afj1pbj2it1rjl144fja78dpdeh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998001974073-8f02mbcq7s2cgd808pnmb0alc0lahpm7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ezlogbook.app.dev",
+                "app_store_id": "1546125983"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

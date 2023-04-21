@@ -1,0 +1,30 @@
+{
+  "name": "RLSimulator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/native-base",
+      "**/react-redux",
+      "**/@reduxjs/toolkit",
+      "react-native-safe-area-context",
+      "react-native-screens",
+      "react-native-svg",
+      "@react-navigation/**",
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "scripts": {
+    "android:start": "yarn workspace mobile android",
+    "ios:start": "yarn workspace mobile ios",
+    "web:start": "yarn workspace web start"
+  }
+}
