@@ -6,6 +6,7 @@ import { Google, Apple, Mail, EpicIcon, SteamIcon, DiscordIcon } from 'assets';
 const colors = {
   primary: Colors.white,
   secondary: Colors.black,
+  transparent: Colors.primary.blue,
   tertiary: Colors.tertiary.gray50,
   destructive: Colors.white,
   underline: Colors.primary.orange,
@@ -41,6 +42,9 @@ const propsByType = {
   secondary: {
     bg: Colors.white,
     borderRadius: 2,
+  },
+  transparent: {
+    bg: 'transparent',
   },
   tertiary: {
     bg: Colors.white,
@@ -90,6 +94,7 @@ type Props = IBoxProps & {
   type:
     | 'primary'
     | 'secondary'
+    | 'transparent'
     | 'tertiary'
     | 'destructive'
     | 'underline'
@@ -111,6 +116,7 @@ export const Button = ({
   type,
   sz,
   text,
+  fontSize,
   textSize,
   disabled = false,
   loading = false,
@@ -177,7 +183,7 @@ export const Button = ({
             {text && (
               <Label
                 fontWeight="medium"
-                fontSize={'xl'}
+                fontSize={fontSize}
                 textSize={textSize === 'large' ? 'medium' : 'small'}
                 color={colors[type]}
                 textDecorationLine={type === 'underline' ? 'underline' : ''}>

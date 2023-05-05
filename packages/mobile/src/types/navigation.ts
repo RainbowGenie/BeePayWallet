@@ -14,6 +14,10 @@ export type WelcomeStackParamList = {
 };
 
 export type AuthStackParamList = {
+  AccountSetupPasscode: undefined;
+  AccountConfirmPasscode: {
+    passcode: string;
+  };
   AccountSetupEmailAddress: undefined;
   AccountSetupPassword: {
     email: string;
@@ -28,6 +32,7 @@ export type AuthStackParamList = {
       }
     | undefined;
   AccountSetupAvatar: undefined;
+  AccountSetupComplete: undefined;
   AccountSetupCertificates: undefined;
   AddMedicalCertificate: undefined;
   AddPilotCertificate: undefined;

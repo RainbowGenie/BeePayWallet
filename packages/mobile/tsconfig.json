@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "jsx": "react-native",
     "strict": true,
     "baseUrl": ".",

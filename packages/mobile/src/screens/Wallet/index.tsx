@@ -1,10 +1,11 @@
 import { Box, HStack, Image, Stack, StatusBar } from 'native-base';
 import { ImageBackground, ScrollView } from 'react-native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-
 import { HomeStackParamList } from 'types';
 import { Label } from 'components';
+// import Web3 from 'web3';
 import { Images } from 'config';
 import {
   Bitcoin,
@@ -20,10 +21,24 @@ import {
   XRP,
 } from 'assets';
 // Home
-function Wallet(): JSX.Element {
+function WalletPage(): JSX.Element {
   // State
   const [isCoins, setIsCoins] = useState(true);
+  useEffect(() => {
+    // const web3 = new Web3();
+    // const newAccount = web3.eth.accounts.create();
+    // console.log(newAccount);
+  }, []);
+  // const generateKeyPair = () => {
+  //   const privateKey = Crypto.randomBytes(32).toString('hex');
+  //   const publicKey = `0x${Crypto.createHash('sha256')
+  //     .update(privateKey)
+  //     .digest('hex')}`;
+  //   return { privateKey, publicKey };
+  // };
 
+  // const { privateKey, publicKey } = generateKeyPair();
+  // console.log({ privateKey });
   return (
     <Box flex={1} safeAreaTop bg={'#BF8122'}>
       <StatusBar backgroundColor="transparent" translucent />
@@ -323,4 +338,4 @@ function Wallet(): JSX.Element {
     </Box>
   );
 }
-export default Wallet;
+export default WalletPage;

@@ -3,6 +3,7 @@ package flight.app.ezlogbook.dev;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import android.os.Bundle;
 
@@ -15,6 +16,14 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "mobile";
+  }
+
+  @Override
+  protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+      new MainReactPackage()
+    , new VectorIconsPackage()
+    );
   }
 
   /**

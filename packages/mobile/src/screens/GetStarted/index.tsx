@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, StatusBar, Stack, HStack, VStack, Checkbox } from 'native-base';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
@@ -10,12 +10,13 @@ import { BeeAppIcon, DefaultAvatar, WelcomeText } from 'assets';
 
 const GetStarted = () => {
   const { navigate } = useNavigation<NavigationProp<RootStackParamList>>();
-  const onGoWelcomeHandler = () => {
-    navigate('WelcomeNavigation', { screen: 'Welcome' });
+  const onCreateNewWallet = () => {
+    navigate('AuthNavigation');
+    // navigate('WelcomeNavigation', { screen: 'Welcome' });
   };
   const onGoSignInHandler = () => {
-    // navigate('AuthNavigation', { screen: 'SignIn' });
-    navigate('HomeNavigation', { screen: 'Wallet' });
+    navigate('AuthNavigation', { screen: 'SignIn' });
+    // navigate('HomeNavigation', { screen: 'Wallet' });
   };
 
   return (
@@ -67,7 +68,7 @@ const GetStarted = () => {
             >
               <DefaultAvatar />
               <Button
-                fontSize={'xl'}
+                fontSize={'md'}
                 textSize={'small'}
                 bg={'#060606'}
                 color={'white'}
@@ -77,21 +78,21 @@ const GetStarted = () => {
                 borderRadius={'8px'}
                 type={'primary'}
                 sz={'small'}
-                text={'Sign in'}
-                onPress={onGoSignInHandler}
+                text={'CREATE A NEW WALLET'}
+                onPress={onCreateNewWallet}
               />
               <Button
-                fontSize={'xl'}
+                fontSize={'md'}
                 textSize={'small'}
-                bg={'#060606'}
-                color={'white'}
+                bg={'transparent'}
                 py={'7px'}
                 w={'80%'}
                 textAlign={'center'}
                 borderRadius={'8px'}
-                type={'primary'}
+                type={'transparent'}
                 sz={'small'}
-                text={'Sign up'}
+                text={'I already have a wallet'}
+                onPress={onGoSignInHandler}
               />
               <HStack
                 space="4"

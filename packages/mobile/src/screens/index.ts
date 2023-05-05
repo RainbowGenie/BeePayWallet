@@ -7,6 +7,8 @@ import Welcome from './Auth/SignUp/Welcome';
 import AccountSetupEmailAddress from './Auth/SignUp/AccountSetupEmailAddress';
 import SignIn from './Auth/SignIn';
 import AccountSetupPassword from './Auth/SignUp/AccountSetupPassword';
+import AccountSetupPasscode from './Auth/SignUp/AccountSetupPasscode';
+import AccountConfirmPasscode from './Auth/SignUp/AccountConfirmPasscode';
 import ForgotPassword from './Auth/ForgotPassword';
 // Account Setup
 import AccountSetupProfile from './Auth/SignUp/AccountSetupProfile';
@@ -31,6 +33,8 @@ export {
   Welcome,
   // Auth
   SignIn,
+  AccountSetupPasscode,
+  AccountConfirmPasscode,
   AccountSetupEmailAddress,
   AccountSetupPassword,
   ForgotPassword,

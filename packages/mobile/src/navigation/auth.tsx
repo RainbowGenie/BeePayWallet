@@ -4,6 +4,7 @@ import { AuthStackParamList } from 'types';
 
 import {
   SignIn,
+  AccountSetupPasscode,
   AccountSetupPassword,
   AccountSetupEmailAddress,
   AccountSetupCertificates,
@@ -13,6 +14,7 @@ import {
   AddPilotCertificate,
   CertificateRatings,
   AccountSetupComplete,
+  AccountConfirmPasscode,
 } from 'screens';
 import { ArrowIcon } from 'components';
 
@@ -22,11 +24,25 @@ const AuthNavigation = () => {
   return (
     <AuthStack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         gestureEnabled: false,
         headerBackTitleVisible: false,
         headerBackImage: () => <ArrowIcon />,
       }}>
+      <AuthStack.Screen
+        name="AccountSetupPasscode"
+        component={AccountSetupPasscode}
+        options={{
+          title: '',
+        }}
+      />
+      <AuthStack.Screen
+        name="AccountConfirmPasscode"
+        component={AccountConfirmPasscode}
+        options={{
+          title: '',
+        }}
+      />
       <AuthStack.Screen
         name="AccountSetupEmailAddress"
         component={AccountSetupEmailAddress}
